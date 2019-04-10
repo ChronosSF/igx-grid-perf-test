@@ -1,0 +1,19 @@
+<igx-grid #grid1
+    [displayDensity]="'compact'"
+    [data]="localData"
+    [autoGenerate]="false"
+    [primaryKey]="'contactID1'"
+    (onColumnInit)="onColumnInit($event)"
+    [groupingExpressions]="groupingExpressions"
+    [width]="'1950px'"
+    [height]="'1050px'">
+    <igx-column *ngFor="let c of columns"
+        [field]="c.field"
+        [header]="c.field"
+        [width]="'100px'"
+        [editable]="true"
+        [groupable]="true">
+    </igx-column>
+</igx-grid>
+<br />
+<label igxLabel>{{endTime}}</label>
